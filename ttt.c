@@ -165,8 +165,8 @@ int main(){
             if(saveresults == 'Y') save_result(player1.name, player2.name, player2.name);
             }
             else{
-            printf("Victory is yours, and it’s been hard-won! With unmatched skill and unwavering courage, you’ve conquered every challenge in your path.");
-            printf("You’ve proven that determination and strength can overcome anything.");
+            printf("Victory is yours, and it's been hard-won! With unmatched skill and unwavering courage, you've conquered every challenge in your path.");
+            printf("You've proven that determination and strength can overcome anything.");
             printf(" Today, you stand as a true champion. Congratulations %s on this legendary achievement!\n", player1.name);
             printf("Do you wish to save the results? Press Y to save results.\n");
             char saveresults;
