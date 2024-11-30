@@ -10,5 +10,3 @@ A simple text-based Tic Tac Toe game in C.
 ## Requirements
 - C compiler
 
-## How to contribute
-- Fork the repository and submit a pull request.
