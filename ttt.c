@@ -147,7 +147,7 @@ int main(){
         for(int m=0; m<3; m++){
             printf("_______\n");
             for(int n=0; n<3; n++){
-                printf("|%c", array[m][n]);
+                printf("|\033[31m%c\033[0m", array[m][n]);
             }
             printf("|\n");
         }
