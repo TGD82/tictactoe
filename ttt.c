@@ -147,7 +147,15 @@ int main(){
         for(int m=0; m<3; m++){
             printf("_______\n");
             for(int n=0; n<3; n++){
-                printf("|\033[31m%c\033[0m", array[m][n]);
+               if (array[m][n] == 'X') {
+                printf("|\033[31m%c\033[0m", array[m][n]); // Red for X
+               } 
+               else if (array[m][n] == 'O') {
+               printf("|\033[33m%c\033[0m", array[m][n]); // Green for O
+               }
+               else {
+               printf("|%c", array[m][n]);
+               } 
             }
             printf("|\n");
         }
