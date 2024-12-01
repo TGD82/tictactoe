@@ -163,6 +163,7 @@ int main(){
             while (getchar() != '\n');
             scanf("%c",&saveresults);
             if(saveresults == 'Y') save_result(player1.name, player2.name, player2.name);
+            else return 0;
             }
             else{
             printf("Victory is yours, and it's been hard-won! With unmatched skill and unwavering courage, you've conquered every challenge in your path.");
@@ -173,6 +174,7 @@ int main(){
             while (getchar() != '\n');
             scanf("%c",&saveresults);
             if(saveresults == 'Y') save_result(player1.name, player2.name, player1.name );
+            else return 0;
             }
             return 0;
         }
@@ -183,6 +185,7 @@ int main(){
     while (getchar() != '\n');
     scanf("%c",&saveresults);
     if(saveresults == 'Y') save_result(player1.name, player2.name, "draw");
+    else return 0;
 return 0;
 }
 }
