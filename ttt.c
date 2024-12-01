@@ -7,6 +7,7 @@ void save_result(const char *player1, const char *player2, const char *result) {
     if (file == NULL) {
         printf("Error: Unable to open file for saving results.\n");
         return;
+        
     }
     if(result == "draw"){
     fprintf(file, "Player 1: %s, Player 2: %s, Result: %s \n", player1, player2, result);
