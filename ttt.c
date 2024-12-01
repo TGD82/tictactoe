@@ -188,7 +188,7 @@ int main(){
             return 0;
         }
     }
-    printf("Game over!\nResult: draw");
+    printf("Game over!\nResult: draw\n");
     printf("Do you wish to save the results? Press Y to save results.\n");
     char saveresults;
     while (getchar() != '\n');
