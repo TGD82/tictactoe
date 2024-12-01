@@ -148,10 +148,10 @@ int main(){
             printf("_______\n");
             for(int n=0; n<3; n++){
                if (array[m][n] == 'X') {
-                printf("|\033[31m%c\033[0m", array[m][n]); // Red for X
+                printf("|\033[31m%c\033[0m", array[m][n]); 
                } 
                else if (array[m][n] == 'O') {
-               printf("|\033[33m%c\033[0m", array[m][n]); // Green for O
+               printf("|\033[33m%c\033[0m", array[m][n]); 
                }
                else {
                printf("|%c", array[m][n]);
