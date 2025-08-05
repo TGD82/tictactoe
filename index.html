@@ -15,9 +15,9 @@
       --bg: #121212;
       --text: #39ff14;
       --text-border:#9b59b6;
+      --char-color: #39ff14;
       --box-bg: #1e1e1e;
       --box-border: #9b59b6;
-      --char-color: #39ff14;
     }
     *{
       margin: 0;
@@ -115,6 +115,13 @@
       margin-top: 10px;
       font-size: 20px;
     }
+    .winning{
+      background-color: #28a745 !important;
+    }
+    body.dark .winning{
+      background-color: #444444 !important;
+    }
+
   </style>
 </head>
 <body>
@@ -189,6 +196,9 @@
           if(cells[a] === p1Char) player1Score++;
           else player2Score++;
           updateScore();
+          document.querySelectorAll(".box")[a].classList.add("winning");
+          document.querySelectorAll(".box")[b].classList.add("winning");
+          document.querySelectorAll(".box")[c].classList.add("winning");
           return;
         }
       }
@@ -198,7 +208,7 @@
       }
     }
     function updateScore(){
-      scoreBoard.textContent = "Player 1: " + player1Score + " | Player 2: " + player2Score;
+      scoreBoard.textContent = " Player 1: "+ player1Score +" | Player 2: "+ player2Score;
     }
     function resetGame(){
       resetCount++;
@@ -209,13 +219,14 @@
       const [p1Char, p2Char] = getChars();
       currentTurn = p1Char === "X" ? p1Char : p2Char;
       createBoard();
+      document.querySelectorAll(".box").forEach(box =>{
+      box.classList.remove("winning");
+      });
     }
     resetBtn.addEventListener("click", resetGame);
     toggleThemeBtn.addEventListener("click", () => {
       document.body.classList.toggle("dark");
-      toggleThemeBtn.textContent = document.body.classList.contains("dark")
-        ? "Switch to Light Mode"
-        : "Switch to Dark Mode";
+      toggleThemeBtn.textContent = document.body.classList.contains("dark") ? "Switch to Light Mode" : "Switch to Dark Mode";
     });
     updateCharDisplay();
     const [p1Char, p2Char] = getChars();
